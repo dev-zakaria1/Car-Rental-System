@@ -20,6 +20,7 @@ return new class extends Migration
             $table->foreignId('author_id')
                 ->constrained('users')
                 ->cascadeOnUpdate();
+            $table->string('image')->nullable();
             $table->dateTime('published_at')->nullable();
             $table->boolean('is_published')->default(false);
             $table->timestamps();
